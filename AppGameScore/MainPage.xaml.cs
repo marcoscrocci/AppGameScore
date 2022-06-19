@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Essentials;
+
 
 namespace AppGameScore
 {
@@ -18,6 +20,12 @@ namespace AppGameScore
         {
             InitializeComponent();
             api = new GameScoreApi();
+            double paddingTop = 0;
+            if (DeviceInfo.Platform == DevicePlatform.iOS)
+            {
+                paddingTop = 60;
+            }
+            tituloFrame.Padding = new Thickness(20, paddingTop, 20, 20);
         }
 
         private async void LocalizarButton_Clicked(object sender, EventArgs e)

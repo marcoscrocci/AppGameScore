@@ -4,7 +4,7 @@
              x:Class="AppGameScore.MainPage">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+        <Frame x:Name="tituloFrame" BackgroundColor="#2196F3" Padding="20,20,20,20" CornerRadius="0">
             <Label Text="Score Game" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
         <StackLayout Padding="20">
